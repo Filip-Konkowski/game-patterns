@@ -1,7 +1,10 @@
 {
+    "name": "filip-game",
+    "license": "proprietary",
+    "type": "project",
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "": "src/"
         }
     },
     "require-dev": {
@@ -9,6 +12,7 @@
         "symfony/console": "^3.2"
     },
     "require": {
-        "phpspec/phpspec": "^4.3"
+        "phpspec/phpspec": "^4.3",
+        "tightenco/collect": "^5.6"
     }
 }
