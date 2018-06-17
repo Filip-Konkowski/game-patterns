@@ -9,7 +9,13 @@
 namespace App\Notification;
 
 
-class Message
+use App\Notification\NotificationInterface\Listener;
+
+class Message implements Listener
 {
 
+    public function update()
+    {
+        // TODO: Implement update() method.
+    }
 }

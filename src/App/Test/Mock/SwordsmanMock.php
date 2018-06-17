@@ -34,4 +34,9 @@ class SwordsmanMock extends Swordsman
     {
         $this->luck = $luck;
     }
+
+    public function setHealth($health)
+    {
+        $this->health = $health;
+    }
 }

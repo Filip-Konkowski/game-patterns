@@ -35,4 +35,9 @@ class BruteMock extends Brute
     {
         $this->luck = $luck;
     }
+
+    public function setHealth($health)
+    {
+        $this->health = $health;
+    }
 }

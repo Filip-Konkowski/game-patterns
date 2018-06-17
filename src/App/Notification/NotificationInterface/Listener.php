@@ -9,7 +9,7 @@
 namespace App\Notification\NotificationInterface;
 
 
-interface Notification
+interface Listener
 {
     public function update();
 

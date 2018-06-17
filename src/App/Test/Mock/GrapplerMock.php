@@ -34,4 +34,9 @@ class GrapplerMock extends Grappler
     {
         $this->luck = $luck;
     }
+
+    public function setHealth($health)
+    {
+        $this->health = $health;
+    }
 }
