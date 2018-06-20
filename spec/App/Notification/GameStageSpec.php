@@ -10,6 +10,9 @@ use Prophecy\Argument;
 
 class GameStageSpec extends ObjectBehavior
 {
+    const WINNING_PLAYER = 'winning';
+    const LOOSING_PLAYER = 'loosing';
+
     /**
      * @var Soldier
      */
@@ -36,16 +39,16 @@ class GameStageSpec extends ObjectBehavior
         $this->getGameStage()->count()->shouldBe(2);
     }
 
-    function it_should_have_stage_of_game()
+    function it_should_have_stage_of_players()
     {
         $this->player1->setHealth(1);
         $this->player2->setHealth(4);
         $this->setGameLastStage([$this->player1, $this->player2]);
 
-        $this->getGameStage()->first()[0]->shouldBeAnInstanceOf(GrapplerMock::class);
+        $this->getGameStage()->first()[$this::WINNING_PLAYER]->shouldBeAnInstanceOf(GrapplerMock::class);
     }
 
-    function it_can_give_current_stage_of_game()
+    function it_can_give_current_stage_of_players()
     {
         $this->player1->setHealth(100);
         $this->player2->setHealth(44);
@@ -56,7 +59,7 @@ class GameStageSpec extends ObjectBehavior
         $this->player2->setHealth(44);
         $this->setGameLastStage([$this->player1, $this->player2]);
 
-        $this->gameCurrentStage()[0]->shouldBeAnInstanceOf(GrapplerMock::class);
+        $this->gameCurrentStage()[$this::WINNING_PLAYER]->shouldBeAnInstanceOf(GrapplerMock::class);
     }
 
 }

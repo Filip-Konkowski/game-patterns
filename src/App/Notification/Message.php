@@ -9,12 +9,13 @@
 namespace App\Notification;
 
 
-use App\Notification\NotificationInterface\Listener;
-
-class Message implements Listener
+class Message implements \SplObserver
 {
 
-    public function update()
+    /**
+     * @inheritdoc
+     */
+    public function update(\SplSubject $subject)
     {
         // TODO: Implement update() method.
     }
